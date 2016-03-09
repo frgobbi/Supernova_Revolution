@@ -1,0 +1,238 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28-gen-2016, 21.00.13
+    Author     : francesco
+*/
+#num1{
+    width: 90px;
+    height: 90px;
+    border-radius: 15px;
+    background-image: url('img/num/1.png');
+    background-repeat: no-repeat;
+    }
+#num2{
+    width: 90px;
+    height: 90px;
+    border-radius: 15px;
+    background-image: url('img/num/2.png');
+    background-repeat: no-repeat;
+    }
+#num3{
+    width: 90px;
+    height: 90px;
+    border-radius: 15px;
+    background-image: url('img/num/3.png');
+    background-repeat: no-repeat;
+    }
+
+#num4{
+    width: 90px;
+    height: 90px;
+    border-radius: 15px;
+    background-image: url('img/num/4.png');
+    background-repeat: no-repeat;
+    }
+#num5{
+    width: 90px;
+    height: 90px;
+    border-radius: 15px;
+    background-image: url('img/num/5.png');
+    background-repeat: no-repeat;
+    }
+#num6{
+    width: 90px;
+    height: 90px;
+    border-radius: 15px;
+    background-image: url('img/num/6.png');
+    background-repeat: no-repeat;
+    }
+
+#num7{
+    width: 90px;
+    height: 90px;
+    border-radius: 15px;
+    background-image: url('img/num/7.png');
+    background-repeat: no-repeat;
+    }
+#num8{
+    width: 90px;
+    height: 90px;
+    border-radius: 15px;
+    background-image: url('img/num/8.png');
+    background-repeat: no-repeat;
+    }
+#num9{
+    width: 90px;
+    height: 90px;
+    border-radius: 15px;
+    background-image: url('img/num/9.png');
+    background-repeat: no-repeat;
+    }
+
+#nump{
+    width: 90px;
+    height: 90px;
+    border-radius: 15px;
+    background-image: url('img/num/_.png');
+    background-repeat: no-repeat;
+    }
+#num0{
+    width: 90px;
+    height: 90px;
+    border-radius: 15px;
+    background-image: url('img/num/0.png');
+    background-repeat: no-repeat;
+    }
+#num00{
+    width: 90px;
+    height: 90px;
+    border-radius: 15px;
+    background-image: url('img/num/00.png');
+    background-repeat: no-repeat;
+    }
+textarea {
+    width: 450px;
+    height: 90px;
+    resize: none;
+    background-color: black;
+    font-family: Snap ITC;
+    color: greenyellow;
+    font-size: 50px;
+    }
+    
+/*BOTTONIAUTOMATICI*/
+#alcolico{
+    width: 160px;
+    height: 60px;
+    border-radius: 15px;
+    background-image: url('img/auto/alcolico.png');
+    background-repeat: no-repeat;
+    }
+#analcolico{
+    width: 160px;
+    height: 60px;
+    border-radius: 15px;
+    background-image: url('img/auto/analcolico.png');
+    background-repeat: no-repeat;
+    }
+#bibita{
+    width: 160px;
+    height: 60px;
+    border-radius: 15px;
+    background-image: url('img/auto/bibita.png');
+    background-repeat: no-repeat;
+    }
+#nutella{
+    width: 160px;
+    height: 60px;
+    border-radius: 15px;
+    background-image: url('img/auto/nutella.png');
+    background-repeat: no-repeat;
+    }
+#patatine{
+    width: 160px;
+    height: 60px;
+    border-radius: 15px;
+    background-image: url('img/auto/patatine.png');
+    background-repeat: no-repeat;
+    }
+#proepeco{
+    width: 160px;
+    height: 60px;
+    border-radius: 15px;
+    background-image: url('img/auto/proepeco.png');
+    background-repeat: no-repeat;
+    }
+#prosciutto{
+    width: 160px;
+    height: 60px;
+    border-radius: 15px;
+    background-image: url('img/auto/prosciutto.png');
+    background-repeat: no-repeat;
+    }
+#salsicce{
+    width: 160px;
+    height: 60px;
+    border-radius: 15px;
+    background-image: url('img/auto/salsicce.png');
+    background-repeat: no-repeat;
+    }
+#stracchino_rucola{
+    width: 160px;
+    height: 60px;
+    border-radius: 15px;
+    background-image: url('img/auto/stracchinoe_rucola.png');
+    background-repeat: no-repeat;
+    }
+#superalcolico{
+    width: 160px;
+    height: 60px;
+    border-radius: 15px;
+    background-image: url('img/auto/superalcolico.png');
+    background-repeat: no-repeat;
+    }
+
+    
+/*BOTTONI VARI*/
+#varie{
+    width: 90px;
+    height: 90px;
+    border-radius: 15px;
+    background-image: url('img/button/varie.png');
+    background-repeat: no-repeat;
+    }
+#sub{
+    width: 90px;
+    height: 158px;
+    border-radius: 15px;
+    background-image: url('img/button/sub.png');
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+    }
+#tot{
+    width: 90px;
+    height: 158px;
+    border-radius: 15px;
+    background-image: url('img/button/tot.png');
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+    }
+    
+#CONTO{
+    width: 380px;
+    height: 90px;
+    border-radius: 15px;
+    background-image: url('img/button/gestione.png');
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+    }
+#cancella{
+    margin-left: 15px;
+    width: 100px;
+    height: 84px;
+    border-radius: 15px;
+    background-image: url('img/button/cancella.png');
+    background-repeat: no-repeat;
+    }
+#annulla{
+    margin-left: 15px;
+    width: 100px;
+    height: 84px;
+    border-radius: 15px;
+    background-image: url('img/button/Annulla.png');
+    background-repeat: no-repeat;
+    }
+#dell{
+    margin-left: 15px;
+    width: 100px;
+    height: 84px;
+    border-radius: 15px;
+    background-image: url('img/button/Dell.png');
+    background-repeat: no-repeat;
+    }
+
+
