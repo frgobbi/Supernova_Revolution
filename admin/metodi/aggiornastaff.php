@@ -7,12 +7,11 @@
  */
 
 session_start();
-                if($_SESSION['login']==TRUE){
-                }
-                else
-                {
-                 header("Location:../../index.php" );
-                }
+if ($_SESSION['login'] == TRUE) {
+    
+} else {
+    header("Location:../../index.php");
+}
 
 
 include '../../connessione.php';
@@ -70,60 +69,60 @@ if (count($parti) > 0) {
 }
 $connessione = null;
 //Tabella
-echo("<table class = \"table table-bordered\" id=\"tabT\"");
+echo("<table class = \"table table-bordered riquadri\" id=\"tabT\"");
+echo("<tr>");
+echo("<th>id</th>");
+echo("<th>nome</th>");
+echo("<th>cognome</th>");
+
+include '../../connessione.php';
+try {
+    foreach ($connessione->query("SELECT * FROM `tipo_staff` WHERE 1") as $row) {
+        echo("<th>" . $row['descrizione'] . "</th>");
+    }
+} catch (PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
+$connessione = null;
+
+echo("<th>ELIMINA</th>");
+echo("</tr>");
+
+include '../../connessione.php';
+$Tstaff = array();
+try {
+    foreach ($connessione->query("SELECT * FROM `staff` WHERE 1") as $row) {
+        $Tstaff[] = array($row['nome'], $row['cognome'], $row['id_staff'], $row['username']);
+    }
+} catch (PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
+$connessione = null;
+
+$id = 1;
+for ($i = 0; $i < count($Tstaff); $i++) {
     echo("<tr>");
-        echo("<th>id</th>");
-        echo("<th>nome</th>");
-        echo("<th>cognome</th>");
+    echo("<td>$id</td>");
+    echo("<td>" . $Tstaff[$i][0] . "</td>");
+    echo("<td>" . $Tstaff[$i][1] . "</td>");
 
-        include '../../connessione.php';
-        try {
-            foreach ($connessione->query("SELECT * FROM `tipo_staff` WHERE 1") as $row) {
-                echo("<th>" . $row['descrizione'] . "</th>");
+    include'../../connessione.php';
+    try {
+        $sql = "SELECT * FROM `tipo_staff` WHERE 1";
+        foreach ($connessione->query($sql) as $row) {
+            if ($row['id_staff'] == $Tstaff[$i][2]) {
+                echo("<td><input type=\"radio\" name=\"funzione" . $id . "\" value=" . $row['id_staff'] . " checked></td>");
+            } else {
+                echo("<td><input type=\"radio\" name=\"funzione" . $id . "\" value=" . $row['id_staff'] . "></td>");
             }
-        } catch (PDOException $e) {
-            echo "Error: " . $e->getMessage();
         }
-        $connessione = null;
-
-        echo("<th>ELIMINA</th>");
-        echo("</tr>");
-
-        include '../../connessione.php';
-        $Tstaff = array();
-        try {
-            foreach ($connessione->query("SELECT * FROM `staff` WHERE 1") as $row) {
-                $Tstaff[] = array($row['nome'], $row['cognome'], $row['id_staff'], $row['username']);
-            }
-        } catch (PDOException $e) {
-            echo "Error: " . $e->getMessage();
-        }
-        $connessione = null;
-
-        $id = 1;
-        for ($i = 0; $i < count($Tstaff); $i++) {
-        echo("<tr>");
-        echo("<td>$id</td>");
-        echo("<td>" . $Tstaff[$i][0] . "</td>");
-        echo("<td>" . $Tstaff[$i][1] . "</td>");
-        
-        include'../../connessione.php';
-        try {
-            $sql = "SELECT * FROM `tipo_staff` WHERE 1";
-            foreach ($connessione->query($sql) as $row) {
-                if ($row['id_staff'] == $Tstaff[$i][2]) {
-                    echo("<td><input type=\"radio\" name=\"funzione" . $id . "\" value=" . $row['id_staff'] . " checked></td>");
-                } else {
-                    echo("<td><input type=\"radio\" name=\"funzione" . $id . "\" value=" . $row['id_staff'] . "></td>");
-                }
-            }
-            echo("<td><input type=\"checkbox\" name=\"elimina\" value=\"" . $Tstaff[$i][3] . "\"></td>");
-        } catch (PDOException $e) {
-            echo "Error: " . $e->getMessage();
-        }
-        $id++;
-        echo("</tr>");
-            }
+        echo("<td><input type=\"checkbox\" name=\"elimina\" value=\"" . $Tstaff[$i][3] . "\"></td>");
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
+    $id++;
+    echo("</tr>");
+}
 echo("</table>");
 
 $num = count($Tstaff);
